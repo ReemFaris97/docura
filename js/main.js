@@ -73,3 +73,66 @@ $('.dropdown').hover(function() {
 $(".remov_this").click(function() {
     $(this).parent(".sm_cart").parent(".notifi1").parent("li").hide(300);
 });
+/**************** Swiper js **********************/
+var Swipes = new Swiper('.swiper-one', {
+    loop: true,
+    autoplay:true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    clickable: true,
+});
+var swiper = new Swiper('.swiper-four-xs-two', {
+    loop: true,
+    autoplay:true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination:false,
+    clickable: true,
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 30
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 10
+        },
+        999: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+  });
+var swiper = new Swiper('.swiper-four-xs-one', {
+    loop: true,
+    autoplay:false,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination:false,
+    clickable: true,
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 0
+        },
+        568: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 10
+        },
+        999: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        }
+    }
+  });
