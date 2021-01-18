@@ -1,0 +1,48 @@
+/************************ ///////// ********************/
+/********** Start First section *****************/
+.first_sec {
+  background: url("../img/docura-bg.webp") no-repeat center;
+  background-size: 100% 100%;
+  min-height: 400px;
+}
+
+/********** End First section *****************/
+/********** Start Header section *****************/
+.header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.header .head_txt {
+  color: #fff;
+  height: 100%;
+  max-width: 60%;
+  line-height: 2;
+}
+
+.header .head_txt h1 {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+}
+
+.header .head_txt h1:nth-child(1) {
+  color: var(--yellow-color);
+}
+
+.header .head_txt p {
+  margin: 0;
+}
+
+/********** End Header section *****************/
+/****** ----------- Responsive --------- ***************/
+/*# sourceMappingURL=content.css.map */
