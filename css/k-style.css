@@ -255,7 +255,169 @@ input#check:focus + label {
 .wrap-input-number input:hover , .wrap-input-number input:focus{
     border-color: #EA9C51;
 }
+
+.about-us p {
+    font-size: 25px;
+    text-align: justify;
+}
+
+.notafacation-wrap > img {
+    position: absolute;
+    right: 25px;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    padding: 10px;
+    top: 25px;
+    border-radius: 50%;
+}
+.no-read {
+    background: #EBF6FB;
+}
+.notafacation-wrap {
+    display: inline-block;
+    width: 100%;
+    padding: 35px;
+    position: relative;
+    padding-right: 140px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.notafacation-wrap .btn-hvr {
+    min-width: 100px;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+}
+.notification-date {
+    font-size: 18px;
+    color: #AAA;
+}
+.delete-all {
+    margin: auto;
+    width: 230px;
+    border-radius: 7px;
+    font-size: 22px;
+}
+.notafacation-data p {
+     font-size: 22px;
+    margin-bottom: 0px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.notafacation-data {
+    width: calc(100% - 145px);
+}
+
+.btn-hvr.delete-all:hover::before, .btn-hvr.delete-all:focus::before {
+    margin-top: -175%;
+}
+.btn-hvr.notafacation-button:hover::before, .btn-hvr.notafacation-button:focus::before {
+    margin-top: -300%;
+}
+.notafacation-data > p span {
+    color: #0056b3;
+    font-weight: 600;
+}
+.delete img {
+    width: 30px;
+}
+.notafacation-button {
+    position: absolute;
+    left: 50px;
+    top: 35px;
+}
+.sign-up .r-div form h3 {
+    margin-bottom: 20px;
+}
+.sign-up .wrap-input {
+    margin-top: 10px;
+}
+.sign-up .reset {
+    margin-top: 25px;
+}
+#sign-up .modal_inner img {
+    max-width: 70px;
+}
+#sign-up .place_div .btn-hvr{
+    font-size: 20px;
+}
+
+#sign-up .modal-body {
+    padding: 2rem;
+}
+#change-password .modal_inner img {
+    max-width: 70px;
+}
+#change-password .place_div .btn-hvr{
+    font-size: 20px;
+}
+#change-password .modal-body {
+    padding: 3rem;
+}
+#change-password .tit-model {
+    margin-bottom: 30px;
+}
+.delete {
+    border-radius: 50%;
+}
+.delete:hover{
+    box-shadow: 0px 5px 8px rgba(0 , 0 , 0, .2);
+}
+
+.wrap-input textarea {
+    width: 100%;
+    height: 140px;
+    padding: 5px 20px;
+    resize: none;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    z-index: 9;
+    border-radius: 4px;
+    transition: .5s all;
+    bottom: 0px;
+    font-size: 20px;
+    margin-bottom: 0px;
+       bottom: -10px;
+
+}    
+.wrap-input textarea:hover, .wrap-input textarea:focus {
+    border-color: #F37254;
+}
+.wrap-input textarea:hover + label, .wrap-input textarea:focus + label{
+    color: #F37254;
+}
+
+@media (min-width: 576px){
+#change-password .modal-dialog , #sign-up .modal-dialog {
+    margin: 10.75rem auto;
+}
+}
 @media(max-width: 768px){
+    .notafacation-wrap > img {
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    top: 20px;
+    }
+    .notafacation-button {
+    left: 20px;
+    top: 25px;
+}
+    .notafacation-wrap {
+    padding: 20px;
+    padding-right: 100px;
+    margin-bottom: 20px;
+}
+    .notafacation-data p {
+        font-size: 18px;
+    }
+    
     .r-div > h1 {
     margin-bottom: 0;
     font-size: 32px;
