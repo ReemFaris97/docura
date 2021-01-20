@@ -12,7 +12,7 @@
 
 .l-div {
     width: calc(100% - 500px);
-    
+
 }
 
 .r-div {
@@ -36,24 +36,30 @@
 .r-div > h1 span {
     color: #F37254;
 }
+
 .r-div > h1 + p {
     font-size: 20px;
     margin-bottom: 25px;
 }
+
 .r-div > h1 {
     font-weight: 600;
     margin-bottom: 10px;
     color: #000;
 }
+
 .r-div > p {
     font-size: 17px;
 }
+
 .r-div > p a {
     color: #F37254;
 }
+
 .r-div > p a:hover {
     color: #000;
 }
+
 .temporary {
     padding: 5px 10px;
     background: #eee;
@@ -63,18 +69,22 @@
     font-weight: 600;
     color: #8f8f8f;
 }
+
 .temporary:hover {
     background: #F37254;
     color: #FFF;
 }
+
 .r-div .end-page {
     width: 240px;
     margin: auto;
     font-size: 19px;
 }
+
 .r-div .end-page a {
     text-decoration: underline;
 }
+
 .r-div .btn-hvr {
     display: inline-block;
     width: 100%;
@@ -96,20 +106,24 @@
     background: #0298D6;
 }
 
-.r-div .btn-hvr:before{
+.r-div .btn-hvr:before {
     transition: .5s all;
 }
-.r-div .btn-hvr:hover::before, .r-div .btn-hvr:focus::before {
+
+.r-div .btn-hvr:hover::before,
+.r-div .btn-hvr:focus::before {
     margin-top: -70%;
     transform: skew(20deg);
     margin-left: 0;
     right: -50px;
     transition: .5s all;
 }
+
 .svg-inline--fa {
     width: .625em;
     margin-left: 10px;
 }
+
 .wrap-input label {
     position: absolute;
     width: 100%;
@@ -119,28 +133,30 @@
     font-weight: 600;
     color: #000;
 }
+
 .wrap-input input {
     position: relative;
     width: 100%;
-    border-bottom: 3px solid transparent;
+    border-bottom: 3px solid #DDD;
     padding: 0px 30px;
     z-index: 9;
     border-radius: 4px;
     transition: .5s all;
     bottom: 0px;
     font-size: 20px;
+    bottom: -2px;
 }
 
-.wrap-input input:hover , .wrap-input input:focus{
+.wrap-input input:hover,
+.wrap-input input:focus {
     border-color: #F37254;
 }
-.wrap-input input:hover + label, .wrap-input input:focus + label{
+
+.wrap-input input:hover + label,
+.wrap-input input:focus + label {
     color: #F37254;
 }
-.wrap-input input:focus{
-        bottom: -2px;
 
-}
 .wrap-input {
     text-align: right;
     display: inline-block;
@@ -152,14 +168,16 @@
     padding-top: 25px;
     margin-bottom: 5px;
 }
+
 .r-div form h3 {
     margin-top: 15px;
     margin-bottom: 35px;
     font-size: 20px;
     color: #0298D6;
     font-weight: 600;
-    
+
 }
+
 .r-div form + h5 {
     margin: 17px;
     font-size: 25px;
@@ -238,8 +256,9 @@ input#check:focus + label {
     color: #EA9C51;
 
 }
+
 .reset {
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 .wrap-input-number input {
@@ -252,7 +271,9 @@ input#check:focus + label {
     font-size: 40px;
     transition: .5s all;
 }
-.wrap-input-number input:hover , .wrap-input-number input:focus{
+
+.wrap-input-number input:hover,
+.wrap-input-number input:focus {
     border-color: #EA9C51;
 }
 
@@ -272,9 +293,11 @@ input#check:focus + label {
     top: 25px;
     border-radius: 50%;
 }
+
 .no-read {
     background: #EBF6FB;
 }
+
 .notafacation-wrap {
     display: inline-block;
     width: 100%;
@@ -291,82 +314,103 @@ input#check:focus + label {
     height: 40px;
     line-height: 40px;
 }
+
 .notification-date {
     font-size: 18px;
     color: #AAA;
 }
+
 .delete-all {
     margin: auto;
     width: 230px;
     border-radius: 7px;
     font-size: 22px;
 }
+
 .notafacation-data p {
-     font-size: 22px;
+    font-size: 22px;
     margin-bottom: 0px;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
 .notafacation-data {
     width: calc(100% - 145px);
 }
 
-.btn-hvr.delete-all:hover::before, .btn-hvr.delete-all:focus::before {
+.btn-hvr.delete-all:hover::before,
+.btn-hvr.delete-all:focus::before {
     margin-top: -175%;
 }
-.btn-hvr.notafacation-button:hover::before, .btn-hvr.notafacation-button:focus::before {
+
+.btn-hvr.notafacation-button:hover::before,
+.btn-hvr.notafacation-button:focus::before {
     margin-top: -300%;
 }
+
 .notafacation-data > p span {
     color: #0056b3;
     font-weight: 600;
 }
+
 .delete img {
     width: 30px;
 }
+
 .notafacation-button {
     position: absolute;
     left: 50px;
     top: 35px;
 }
+
 .sign-up .r-div form h3 {
     margin-bottom: 20px;
 }
+
 .sign-up .wrap-input {
     margin-top: 10px;
 }
+
 .sign-up .reset {
     margin-top: 25px;
 }
+
 #sign-up .modal_inner img {
     max-width: 70px;
 }
-#sign-up .place_div .btn-hvr{
+
+#sign-up .place_div .btn-hvr {
     font-size: 20px;
 }
 
 #sign-up .modal-body {
     padding: 2rem;
 }
+
 #change-password .modal_inner img {
     max-width: 70px;
 }
-#change-password .place_div .btn-hvr{
+
+#change-password .place_div .btn-hvr {
     font-size: 20px;
 }
+
 #change-password .modal-body {
     padding: 3rem;
 }
+
 #change-password .tit-model {
     margin-bottom: 30px;
 }
+
 .delete {
     border-radius: 50%;
 }
-.delete:hover{
-    box-shadow: 0px 5px 8px rgba(0 , 0 , 0, .2);
+
+.delete:hover {
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, .2);
 }
 
 .wrap-input textarea {
@@ -382,67 +426,173 @@ input#check:focus + label {
     bottom: 0px;
     font-size: 20px;
     margin-bottom: 0px;
-       bottom: -10px;
+    bottom: -10px;
 
-}    
-.wrap-input textarea:hover, .wrap-input textarea:focus {
+}
+
+.wrap-input textarea:hover,
+.wrap-input textarea:focus {
     border-color: #F37254;
 }
-.wrap-input textarea:hover + label, .wrap-input textarea:focus + label{
+
+.wrap-input textarea:hover + label,
+.wrap-input textarea:focus + label {
     color: #F37254;
 }
 
-@media (min-width: 576px){
-#change-password .modal-dialog , #sign-up .modal-dialog {
-    margin: 10.75rem auto;
+.contact form {
+    width: 600px;
+    margin: auto;
+    text-align: center;
 }
+
+.contact form .btn-hvr {
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 280px
 }
-@media(max-width: 768px){
-    .notafacation-wrap > img {
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-    top: 20px;
+
+.contact .btn-hvr:hover::before,
+.contact .btn-hvr:focus::before {
+    margin-top: -180%;
+}
+
+.wallet-wrap {
+    width: 400px;
+    margin: auto;
+    display: inline-flex;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.wallet-wrap .btn-hvr {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    max-width: none;
+    border-radius: 5px;
+}
+.wallet-wrap .btn-hvr:hover::before,.wallet-wrap .btn-hvr:focus::before {
+    margin-top: -100%;
+    
+}
+
+.wallet-data span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    line-height: 1;
+}
+
+.wallet-data h1 {
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.wallet-data .the-balance {
+    font-size: 80px;
+    font-family: '29LTZaridSlab-BBold';
+    line-height: .7;
+    color: #F37254;
+}
+
+.wallet-data {
+    width: 100%;
+    padding: 0px 10px;
+}
+
+@media (min-width: 576px) {
+
+    #change-password .modal-dialog,
+    #sign-up .modal-dialog {
+        margin: 10.75rem auto;
     }
+}
+
+@media(max-width: 768px) {
+    .notafacation-wrap > img {
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+        top: 20px;
+    }
+
     .notafacation-button {
-    left: 20px;
-    top: 25px;
-}
+        left: 20px;
+        top: 25px;
+    }
+
     .notafacation-wrap {
-    padding: 20px;
-    padding-right: 100px;
-    margin-bottom: 20px;
-}
+        padding: 20px;
+        padding-right: 100px;
+        margin-bottom: 20px;
+    }
+
     .notafacation-data p {
         font-size: 18px;
     }
-    
+
     .r-div > h1 {
-    margin-bottom: 0;
-    font-size: 32px;
-}
+        margin-bottom: 0;
+        font-size: 32px;
+    }
+
     .temporary {
         margin-bottom: 20px
     }
-    
+
+
     .r-div {
         width: 400px;
         padding: 50px 50px;
     }
+
     .l-div {
         width: calc(100% - 400px);
     }
-    
-    .r-div .btn-hvr{
+
+    .r-div .btn-hvr {
         margin-bottom: 5px;
     }
+
+    .contact form {
+        width: 480px;
+        margin: auto;
+    }
 }
-@media(max-width: 500px){
+
+@media(max-width: 500px) {
     .r-div {
         width: 100%;
     }
-    .l-div{
+
+    .wallet-wrap {
+        width: 100%;
+        margin: 0px 15px;
+/*        padding-bottom: 100px;*/
+    }
+
+    .wallet-data .the-balance {
+        font-size: 60px;
+    }
+
+    .wallet-data h1 {
+        font-size: 35px;
+    }
+
+    .l-div {
         display: none;
+    }
+
+    .contact form {
+        width: 100%;
+        margin: auto;
+        padding: 0px 15px;
     }
 }
