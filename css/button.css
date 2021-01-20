@@ -34,7 +34,7 @@
 }
 .btn-hvr::before {
     content: "";
-    width: 104%;
+    width: 200%;
     height: 600px;
     transition: all 0.5s ease-in-out;
     background-color: var(--yellow-color);
@@ -43,7 +43,7 @@
     margin-left: -50%;
     z-index: -2;
     margin-top: -700px;
-    right: 0;
+    right: -50%;
 }
 .btn-hvr:hover::after,
 .btn-hvr:focus::after {
@@ -57,11 +57,10 @@
 }
 .btn-hvr:hover::before,
 .btn-hvr:focus::before {
-    margin-top: -270%;
+    margin-top:-126%;
     transform: skew(20deg);
     margin-left: 0;
 }
-
 /********************** end my button **************/
 /************************/
 .social li {

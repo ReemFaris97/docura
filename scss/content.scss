@@ -168,6 +168,7 @@ $grey-bg: #f2f4f7;
   margin: 0 auto 35px auto;
   text-align: center;
   position: relative;
+  width: max-content;
   &::before,
   &::after {
     content: "";
@@ -290,6 +291,9 @@ $grey-bg: #f2f4f7;
     z-index: 9;
     line-height: 1;
     padding: 14px;
+    @include dis-flex();
+    @include flex-dir-column();
+    justify-content: flex-end;
     &::before {
       position: absolute;
       bottom: 0;
@@ -302,7 +306,7 @@ $grey-bg: #f2f4f7;
       @include rTransition(transform 0.35s);
     }
   }
-  h2 {
+  .sect_title {
     padding: 6px 10px;
     border-radius: 30px;
     font-size: 20px;
@@ -312,6 +316,8 @@ $grey-bg: #f2f4f7;
     @include rTransform(translate3d(0, -30px, 0));
     @include rTransition(transform 0.35s);
     @extend %ellipsis;
+    display: block;
+    color: #fff;
     i {
       font-style: normal;
       opacity: 0;
@@ -345,12 +351,12 @@ $grey-bg: #f2f4f7;
     img {
       opacity: 0.5;
     }
-    h2 i {
+    .sect_title i {
       display: inline-block;
     }
     figcaption::before,
-    h2,
-    h2 i {
+    .sect_title,
+    .sect_title i {
       @include rTransform(translate3d(0, 0, 0));
       opacity: 1;
     }
@@ -359,7 +365,7 @@ $grey-bg: #f2f4f7;
 .the_offers .eff_market {
   margin-bottom: 30px;
 }
-.swiper-four {
+.swiper-four  , .swiper-sections{
   .swiper-button-prev,
   .swiper-button-next {
     background-color: #bcbcbc;
@@ -617,6 +623,84 @@ button.blu_btn {
   }
 }
 /********** End Download *****************/
+/********** Start Sections Swiper *****************/
+.section1{
+  border-radius: 10px;
+  @include flex-center();
+  @include flex-dir-column();
+  background: url('../img/food-background.webp') no-repeat center;
+  background-size: cover;
+  height: 140px;
+  padding: 5px;
+}
+.sec{
+  @extend %semi_bold;
+}
+.sec_namee{
+  margin-bottom: 0;
+}
+/********** End Sections Swiper *****************/
+/********** Start Markets *****************/
+.docura_bg{
+  position: relative;
+  width: max-content;
+  margin: 0 auto 30px auto;
+  &::before{
+    content: "docura";
+    font-size: 8rem;
+    @extend %bold;
+    line-height: .60em;
+    text-transform: uppercase;
+    color: $pink-color;
+    opacity: .12;
+    z-index: -1;
+    position: absolute;
+    @extend %absolute;
+    top: 25px;
+    @include flex-center();
+  }
+}
+/********** End Markets *****************/
+/********** Start Sections *****************/
+.eff_market h2.sect_title {
+  @include rTransform(translate3d(0, -170px, 0));
+  border-radius: 4px;
+  background-color: #fff;
+  color: $black-color;
+}
+/********** End Sections *****************/
+/*********** Start Like Button *************/
+.likerr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: $black-color;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  font-size: 20px;
+  border-radius: 50%;
+  @include rTransition(all 0.3s ease-in-out);
+  &.i_liked {
+      background-color: $pink-color;
+      color: #fff;
+  }
+}
+.eff_market .likerr {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 9;
+}
+/*********** End Like Button *************/
 /****** ----------- Responsive --------- ***************/
 @media (max-width: 991px) {
 }
@@ -656,7 +740,7 @@ button.blu_btn {
   }
   .eff_market {
     height: 220px;
-    h2 {
+    .sect_title {
       font-size: 15px;
     }
     .market_name p {
@@ -689,6 +773,12 @@ button.blu_btn {
     text-align: center;
     }
   }
+  .eff_market h2.sect_title {
+    @include rTransform(translate3d(0, -70px, 0));
+  }
 }
-@media (max-width: 499px) {
+@media (max-width: 567px) {
+  .docura_bg::before {
+    font-size: 50px;
+  }
 }

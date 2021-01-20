@@ -70,6 +70,14 @@ $('.dropdown').hover(function() {
 $(".remov_this").click(function() {
     $(this).parent(".sm_cart").parent(".notifi1").parent("li").hide(300);
 });
+//////// like button
+$(function () {
+    $("button.likerr").each(function () {
+        $(this).click(function () {
+            $(this).toggleClass("i_liked");
+        });
+    });
+});
 /**************** Swiper js **********************/
 var Swipes = new Swiper('.swiper-one', {
     loop: true,
@@ -110,7 +118,7 @@ var swiper = new Swiper('.swiper-four-xs-two', {
   });
 var swiper = new Swiper('.swiper-four-xs-one', {
     loop: true,
-    autoplay:false,
+    autoplay:true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -134,6 +142,43 @@ var swiper = new Swiper('.swiper-four-xs-one', {
         999: {
             slidesPerView: 4,
             spaceBetween: 15,
+        }
+    }
+  });
+var swiper = new Swiper('.swiper-sections', {
+    loop: true,
+    autoplay:false,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination:false,
+    clickable: true,
+    // Responsive breakpoints
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 0
+        },
+        360: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 10
+        },
+        567: {
+            slidesPerView: 4,
+            spaceBetweenSlides: 10
+        },
+        991: {
+            slidesPerView: 5,
+            spaceBetweenSlides: 10
+        },
+        999: {
+            slidesPerView: 6,
+            spaceBetween: 10,
+        },
+        1200: {
+            slidesPerView: 9,
+            spaceBetween: 10,
         }
     }
   });
