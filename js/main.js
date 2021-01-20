@@ -9,9 +9,6 @@ ldoor.style.border = "0";
 rdoor.style.border = "0";
 }
 $(document).ready(function () {
-    $('[data-spy="scroll"]').each(function () {
-        var $spy = $(this).scrollspy('refresh')
-    });
     var o;
     jQuery(window).load(function () {
             $(".loader").fadeOut(500, function () {
@@ -126,7 +123,11 @@ var swiper = new Swiper('.swiper-four-xs-one', {
             slidesPerView: 1,
             spaceBetweenSlides: 0
         },
-        568: {
+        567: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 10
+        },
+        991: {
             slidesPerView: 3,
             spaceBetweenSlides: 10
         },
