@@ -27,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="دوسورا تقدم أفضل الكورسات العلمية">
-    <title>Docura-تسجيل جديد </title>
+    <title>Docura- نسيت كلمة المرور </title>
     <!------------- Start generated favicon --------->
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -59,29 +59,64 @@
 </head>
 
 <body data-spy="scroll" data-target=".nav.cf" data-offset="100" onload="load()">
-    <section class="static-pages">
+    <section class="static-pages sign-up">
         <div class="static-pages-content">
             <div class="r-div text-center">
                 <img src="img/arrow-left.webp">
                 <a href="index.html" class="logo-k">
                     <img src="img/logo.png">
                 </a>
-                <h1>نوصل هديتك وانت مرتاح <span>(:</span></h1>
-                <p>يجب عليك إنشاء حساب او الدخول للحصول على خدماتنا</p>
 
-                <a href="#" class="btn-hvr google"> <i class="fab fa-google-plus-g"></i> التسجيل ب google </a>
-                <a href="#" class="btn-hvr Facebook"> <i class="fab fa-facebook-f"></i> التسجيل ب Facebook</a>
-                <h5>او</h5>
-                <a href="sign-up.html" class="btn-hvr e-mail">التسجيل بالبريد الإلكترونى</a>
-                <p>لديك حساب بالفعل ؟ <a href="sign-in.html">تسجيل الدخول</a></p>
-                <a href="index.html" class="temporary">دخول كضيف</a>
-                <p class="end-page">تسجيلك فى تطبيق دوسورا انت توافق على <a href="#">الشروط و الاحكام</a> و <a href="#">القوانين الخصوصية</a></p>
+                <form action="check-code.html">
+                    <h3>إنشاء حساب </h3>
+
+                    <div class="wrap-input">
+                        <input type="email" placeholder="user@user.com">
+                        <label>البريد الإلكتروني</label>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="email" placeholder="user****">
+                        <label>الأسم الأول</label>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="email" placeholder="user****">
+                        <label>الأسم الأخير</label>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="text" placeholder="0099515*****">
+                        <label>رقم الجوال</label>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="password" placeholder="12345*****">
+                        <label>كلمة المرور</label>
+                    </div>
+
+                    <button type="button" class="btn-hvr reset" data-toggle="modal" data-target="#sign-up">إنشاء حساب </button>
+                </form>
             </div>
             <div class="l-div">
                 <img src="img/labtop.webp" alt="labtop">
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal_inner">
+                        <img src="img/like.webp" onerror="this.src='img/logo.png'" loading="lazy" decoding="async">
+                        <p class="will_pay">تم انشاء حسابك بنجاح </p>
+                        <div class="place_div">
+                            <span class="tit-model">أهلا بك فى تطبيق دوسورا (:</span>
+                            <!--                            <a target="_blank" href="profile.html" class="btn-hvr">الذهاب إلي حساب الشخصي</a>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- /////////////////////||||||||||||||||||||||||||||| Start Script |||||||||||||||||||||||||||| -->
     <script src="js/jquery-2.1.4.min.js"></script>
