@@ -144,7 +144,7 @@ $grey-bg: #f2f4f7;
     background-repeat: no-repeat;
     background-size: auto 100%;
     position: absolute;
-    top: 80px;
+    top: 60px;
     width: 70px;
     height: 110px;
   }
@@ -197,7 +197,6 @@ $grey-bg: #f2f4f7;
 .first_sec {
   background: url("../img/docura-bg.webp") no-repeat center;
   background-size: 100% 100%;
-  min-height: 400px;
   padding: 90px 0 20px 0;
 }
 /********** End First section *****************/
@@ -205,6 +204,7 @@ $grey-bg: #f2f4f7;
 .header {
   @include dis-flex();
   @include flex-col-center();
+  min-height: 400px;
   .head_txt {
     max-width: 80%;
     h2 {
@@ -322,7 +322,7 @@ $grey-bg: #f2f4f7;
       color: $yellow-color;
     }
   }
-  a {
+  .market_name {
     @extend %bold;
     display: block;
     color: #fff;
@@ -355,6 +355,9 @@ $grey-bg: #f2f4f7;
       opacity: 1;
     }
   }
+}
+.the_offers .eff_market {
+  margin-bottom: 30px;
 }
 .swiper-four {
   .swiper-button-prev,
@@ -493,59 +496,127 @@ button.blu_btn {
     margin: 0 auto 20px auto;
   }
   p {
-      span{
-          color: $pink-color;
-      }
+    span {
+      color: $pink-color;
+    }
   }
 }
 .will_pay {
-    color: $blue-color;
+  color: $blue-color;
 }
 .modal_btns {
-    @include dis-flex();
-    justify-content: space-around;
-    margin: 20px auto 0 auto;
+  @include dis-flex();
+  justify-content: space-around;
+  margin: 20px auto 0 auto;
   .btn-hvr {
     border-radius: 8px;
     font-size: 21px;
     min-width: 120px;
-    &:last-child{
-        background-color: #fff;
-        color: $blue-color;
-        border: 2px solid $blue-color;
-        &:hover , &:focus{
-            border-color: transparent;
-            color: #fff;
-        }
+    &:last-child {
+      background-color: #fff;
+      color: $blue-color;
+      border: 2px solid $blue-color;
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        color: #fff;
+      }
     }
   }
 }
-.place_div{
-    @include dis-flex();
-    @include flex-dir-column();
-    .btn-hvr{
-        width: 100%;
-        border-radius: 8px;
-        max-width: unset;
-        &:hover , &:focus{
-            &::before{
-                margin-top: -100%;
-            }
-        }
-    }
-}
-.place_input{
-    margin-bottom: 24px;
+.place_div {
+  @include dis-flex();
+  @include flex-dir-column();
+  .btn-hvr {
     width: 100%;
-    color: $grey-color;
-    border: 2px solid $grey-bg;
-    padding: 14px 4px;
-    @extend %ellipsis;
-    span{
-        margin-left: 10px;
+    border-radius: 8px;
+    max-width: unset;
+    &:hover,
+    &:focus {
+      &::before {
+        margin-top: -100%;
+      }
     }
+  }
+}
+.place_input {
+  margin-bottom: 24px;
+  width: 100%;
+  color: $grey-color;
+  border: 2px solid $grey-bg;
+  padding: 14px 4px;
+  @extend %ellipsis;
+  span {
+    margin-left: 10px;
+  }
 }
 /********** End Training Modals *****************/
+/********** Start Download *****************/
+.download {
+  background: url("../img/download-bg.webp") no-repeat bottom center;
+  background-size: contain;
+  position: relative;
+  min-height: 80vh;
+  @include dis-flex();
+  @include flex-col-center();
+  &::after {
+    content: "";
+    width: 60%;
+    height: 100%;
+    background: url("../img/docura-app2.webp") no-repeat bottom right;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+  }
+}
+.driver {
+  max-width: 40%;
+  padding-right: 40px;
+  height: 100%;
+}
+.title_right {
+  margin-bottom: 35px;
+  text-align: right;
+  h2 {
+    @extend %bold;
+    margin-top: 0;
+  }
+  h4 {
+    margin: 0;
+  }
+}
+.dl_images {
+  @include dis-flex();
+  justify-content: center;
+  width: 100%;
+  a {
+    flex: 1 1 0;
+    img {
+      width: 100%;
+      height: 90%;
+      @include objectFit(contain);
+      @include rTransition(all 0.3s ease-in-out);
+    }
+    &:first-child {
+      &:hover,
+      &:focus {
+        img {
+          filter: drop-shadow(0 0 0.75rem #3c72ed);
+        }
+      }
+    }
+    &:last-child {
+      &:hover,
+      &:focus {
+        img {
+          filter: drop-shadow(0 0 0.75rem #DF2C41);
+        }
+      }
+    }
+  }
+}
+/********** End Download *****************/
 /****** ----------- Responsive --------- ***************/
 @media (max-width: 991px) {
 }
@@ -588,8 +659,34 @@ button.blu_btn {
     h2 {
       font-size: 15px;
     }
-    a p {
+    .market_name p {
       font-size: 16px;
+    }
+  }
+  /********* dowload section *************/
+  .download {
+    min-height: unset;
+    justify-content: center;
+    &::before {
+      background-color: rgba(255 ,255 ,255 ,.5);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 0;
+      background-image: none;
+      z-index: 9;
+    }
+}
+  .driver {
+    max-width: unset;
+    height: auto;
+    position: relative;
+    z-index: 9;
+    padding-right: 0;
+    & > *{
+    text-align: center;
     }
   }
 }
