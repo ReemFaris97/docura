@@ -1,4 +1,4 @@
-.my_title::before, .my_title::after, .eff_market:after {
+.docura_bg::before, .my_title::before, .my_title::after, .eff_market:after {
   position: absolute;
   right: 0;
   left: 0;
@@ -20,18 +20,18 @@
   z-index: 9;
 }
 
-.place_input, .trn_owner, .trn_title, .eff_market .market_name p, .eff_market h2 {
+.place_input, .trn_owner, .trn_title, .eff_market .market_name p, .eff_market .sect_title {
   white-space: nowrap;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.title_right h2, .modal_inner, .trn_price span, .trn_title, .eff_market .market_name, .header .head_off, .header .head_txt h2, .my_title h1 {
+.docura_bg::before, .title_right h2, .modal_inner, .trn_price span, .trn_title, .eff_market .market_name, .header .head_off, .header .head_txt h2, .my_title h1 {
   font-family: "29LTZaridSlab-Bold";
 }
 
-.trn_price, .trn_owner, .blu_btn, .header .head_txt p, .my_title h3 {
+.sec, .trn_price, .trn_owner, .blu_btn, .header .head_txt p, .my_title h3 {
   font-family: "29LTZaridSlab-SemiBold";
 }
 
@@ -68,6 +68,9 @@
   margin: 0 auto 35px auto;
   text-align: center;
   position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .my_title::before, .my_title::after {
   content: "";
@@ -222,6 +225,16 @@
   z-index: 9;
   line-height: 1;
   padding: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .eff_market figcaption::before {
   position: absolute;
@@ -239,7 +252,7 @@
   transition: transform 0.35s;
   transition: transform 0.35s, -webkit-transform 0.35s;
 }
-.eff_market h2 {
+.eff_market .sect_title {
   padding: 6px 10px;
   border-radius: 30px;
   font-size: 20px;
@@ -255,8 +268,10 @@
   transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
   transition: transform 0.35s, -webkit-transform 0.35s;
+  display: block;
+  color: #fff;
 }
-.eff_market h2 i {
+.eff_market .sect_title i {
   font-style: normal;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -287,12 +302,12 @@
 .eff_market:hover img {
   opacity: 0.5;
 }
-.eff_market:hover h2 i {
+.eff_market:hover .sect_title i {
   display: inline-block;
 }
 .eff_market:hover figcaption::before,
-.eff_market:hover h2,
-.eff_market:hover h2 i {
+.eff_market:hover .sect_title,
+.eff_market:hover .sect_title i {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   opacity: 1;
@@ -303,25 +318,29 @@
 }
 
 .swiper-four .swiper-button-prev,
-.swiper-four .swiper-button-next {
+.swiper-four .swiper-button-next, .swiper-sections .swiper-button-prev,
+.swiper-sections .swiper-button-next {
   background-color: #bcbcbc;
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
 .swiper-four .swiper-button-prev::after,
-.swiper-four .swiper-button-next::after {
+.swiper-four .swiper-button-next::after, .swiper-sections .swiper-button-prev::after,
+.swiper-sections .swiper-button-next::after {
   font-size: 26px;
 }
 .swiper-four .swiper-button-prev:hover, .swiper-four .swiper-button-prev:focus,
 .swiper-four .swiper-button-next:hover,
-.swiper-four .swiper-button-next:focus {
+.swiper-four .swiper-button-next:focus, .swiper-sections .swiper-button-prev:hover, .swiper-sections .swiper-button-prev:focus,
+.swiper-sections .swiper-button-next:hover,
+.swiper-sections .swiper-button-next:focus {
   background-color: var(--yellow-color);
 }
-.swiper-four .swiper-button-prev {
+.swiper-four .swiper-button-prev, .swiper-sections .swiper-button-prev {
   right: 0;
 }
-.swiper-four .swiper-button-next {
+.swiper-four .swiper-button-next, .swiper-sections .swiper-button-next {
   left: 0;
 }
 
@@ -578,6 +597,108 @@ button.blu_btn:hover, button.blu_btn:focus {
 }
 
 /********** End Download *****************/
+/********** Start Sections Swiper *****************/
+.section1 {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: url("../img/food-background.webp") no-repeat center;
+  background-size: cover;
+  height: 140px;
+  padding: 5px;
+}
+
+.sec_namee {
+  margin-bottom: 0;
+}
+
+/********** End Sections Swiper *****************/
+/********** Start Markets *****************/
+.docura_bg {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto 30px auto;
+}
+.docura_bg::before {
+  content: "docura";
+  font-size: 8rem;
+  line-height: 0.6em;
+  text-transform: uppercase;
+  color: var(--pink-color);
+  opacity: 0.12;
+  z-index: -1;
+  position: absolute;
+  top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/********** End Markets *****************/
+/********** Start Sections *****************/
+.eff_market h2.sect_title {
+  -webkit-transform: translate3d(0, -170px, 0);
+  transform: translate3d(0, -170px, 0);
+  border-radius: 4px;
+  background-color: #fff;
+  color: var(--black-color);
+}
+
+/********** End Sections *****************/
+/*********** Start Like Button *************/
+.likerr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: var(--black-color);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  font-size: 20px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.likerr.i_liked {
+  background-color: var(--pink-color);
+  color: #fff;
+}
+
+.eff_market .likerr {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 9;
+}
+
+/*********** End Like Button *************/
 /****** ----------- Responsive --------- ***************/
 @media (max-width: 767px) {
   .first_sec {
@@ -622,7 +743,7 @@ button.blu_btn:hover, button.blu_btn:focus {
   .eff_market {
     height: 220px;
   }
-  .eff_market h2 {
+  .eff_market .sect_title {
     font-size: 15px;
   }
   .eff_market .market_name p {
@@ -657,5 +778,15 @@ button.blu_btn:hover, button.blu_btn:focus {
   }
   .driver > * {
     text-align: center;
+  }
+
+  .eff_market h2.sect_title {
+    -webkit-transform: translate3d(0, -70px, 0);
+    transform: translate3d(0, -70px, 0);
+  }
+}
+@media (max-width: 567px) {
+  .docura_bg::before {
+    font-size: 50px;
   }
 }/*# sourceMappingURL=content.css.map */

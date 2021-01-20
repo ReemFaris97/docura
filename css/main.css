@@ -966,11 +966,15 @@ footer a:focus {
   background-size: 100% 100%;
   background-color: var(--blue-color);
 }
-.breadcrumbs h4{
-
+/******* see more button**********/
+.see_more{
+  text-align: center;
+  padding: 20px 0 0 0;
 }
-.breadcrumbs a{
-
+.see_more .btn-hvr{
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 /* Media Screen */
 @media (min-width: 1280px) {
