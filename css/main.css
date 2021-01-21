@@ -57,6 +57,9 @@ b{
   padding: 0;
   outline: none !important;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "29LTZaridSlab" !important;
   padding: 0 !important;
@@ -965,6 +968,41 @@ footer a:focus {
   background-position: center right;
   background-size: 100% 100%;
   background-color: var(--blue-color);
+}
+.first_sec.breadcru_bg{
+  background: url('../img/docura11.webp') no-repeat center;
+  background-size: 100% 100%;
+  min-height: 450px;
+  display: flex;
+}
+.breadcru_bg .breadcrumbs_inn{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: flex-end;
+}
+.breadcru_bg .emoji{
+  background-color: var(--pink-color);
+    height: 50px;
+    line-height: 50px;
+    border-radius: 6px;
+    min-width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+    font-family: "29LTZaridSlab-SemiBold";
+    padding: 0 8px;
+}
+.breadcru_bg .likerr{
+  font-family: "29LTZaridSlab-SemiBold";
+  background-color: #fff;
+  color: var(--black-color);
+  height: 50px;
+  line-height: 50px;
+  border-radius: 6px;
+  min-width: 100px;
+  width: unset;
+  padding: 0 8px;
 }
 /******* see more button**********/
 .see_more{

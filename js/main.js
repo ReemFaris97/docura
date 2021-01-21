@@ -30,7 +30,7 @@ $(document).ready(function () {
         }), $("#scroll-top").click(function () {
             $("html,body").animate({
                 scrollTop: 0
-            }, 600)
+            }, 10)
         });
     ///////////// Font awesome 5 on pseudo elements
     window.FontAwesomeConfig = {
@@ -70,6 +70,11 @@ $('.dropdown').hover(function() {
 $(".remov_this").click(function() {
     $(this).parent(".sm_cart").parent(".notifi1").parent("li").hide(300);
 });
+/************ remove item from navbar cart ****/
+$(".delet_item").click(function() {
+    $(this).parents(".left-card").hide(300);
+});
+
 //////// like button
 $(function () {
     $("button.likerr").each(function () {
