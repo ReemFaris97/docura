@@ -119,7 +119,7 @@
     transition: .5s all;
 }
 
-.svg-inline--fa {
+.r-div .svg-inline--fa {
     width: .625em;
     margin-left: 10px;
 }
@@ -183,21 +183,27 @@
     font-size: 25px;
 }
 
-input#check {
+input.chk-box {
     position: absolute;
     opacity: 0;
     display: none;
 }
 
-input#check:checked + label svg path {
+input.chk-box:checked + label svg path {
     stroke-dashoffset: 0;
+    stroke: #FFF;
 }
 
-input#check:focus + label {
+input.chk-box:checked + label {
+    background: #F37254;
+    border-color: #F37254;
+}
+
+input.chk-box:focus + label {
     transform: scale(1.03);
 }
 
-#check + label {
+.chk-box + label {
     display: inline-block;
     border: 2px solid #333;
     width: 20px;
@@ -211,11 +217,11 @@ input#check:focus + label {
     position: relative;
 }
 
-#check + label:active {
+.chk-box + label:active {
     transform: scale(1.05);
 }
 
-#check + label svg {
+.chk-box + label svg {
     pointer-events: none;
     position: absolute;
     width: 12px;
@@ -224,7 +230,7 @@ input#check:focus + label {
     right: 1px;
 }
 
-#check + label svg path {
+.chk-box + label svg path {
     fill: none;
     stroke: #784E29;
     stroke-width: 4px;
@@ -473,9 +479,10 @@ input#check:focus + label {
     max-width: none;
     border-radius: 5px;
 }
-.wallet-wrap .btn-hvr:hover::before,.wallet-wrap .btn-hvr:focus::before {
+
+.wallet-wrap .btn-hvr:hover::before,
+.wallet-wrap .btn-hvr:focus::before {
     margin-top: -100%;
-    
 }
 
 .wallet-data span {
@@ -506,15 +513,385 @@ input#check:focus + label {
     padding: 0px 10px;
 }
 
+.input-file-wrap input {
+    float: left;
+    text-align: left;
+    font-weight: 600;
+    width: calc(100% - 140px);
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.input-file-wrap {
+    font-size: 29px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 14px;
+}
+
+.img-user {
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid #DDD;
+    display: inherit;
+    margin: auto;
+    margin-bottom: 30px;
+
+}
+
+.profile-data-wrap .btn-hvr:hover::before,
+.profile-data-wrap .btn-hvr:focus::before {
+    margin-top: -90%;
+}
+
+.input-file-wrap label {
+    color: #F37254;
+}
+
+.profile-data-wrap {
+    padding-right: 90px;
+}
+
+.profile-data-wrap .btn-hvr {
+    display: inherit;
+    width: 100%;
+    max-width: none;
+    margin-top: 15px;
+    font-size: 24px;
+    border-radius: 7px;
+    height: 64px;
+    line-height: 64px;
+}
+
+.profile-data-wrap a.btn-hvr:last-child,
+.add-address.btn-hvr:last-child {
+    background: #FFF;
+    color: #4c99d6;
+    border: 2px solid #4c99d6;
+    border-radius: 5px;
+}
+
+.profile-data-wrap a.btn-hvr:last-child:hover,
+.add-address.btn-hvr:last-child:hover,
+.profile-data-wrap a.btn-hvr:last-child:focus,
+.add-address.btn-hvr:last-child:focus {
+    color: #FFF;
+    border-color: #FFF;
+}
+
+
+
+
+.profile form {
+    width: 100%;
+}
+
+
+.upload-input {
+    position: relative;
+    height: 1px;
+    width: 1px;
+    display: block;
+    top: 30px;
+    display: none;
+}
+
+.input-file-wrap input.chang {
+    color: #868686;
+}
+
+.my_title.right {
+    margin: 0 0;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.upload-label {
+    height: 40px;
+    padding-right: 12px;
+    padding-left: 5px;
+    color: #fff;
+    background-color: #009;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+    width: 40px;
+    position: absolute;
+}
+
+.upload-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.upload-wrapper {
+    position: relative;
+    display: inherit;
+    margin: auto;
+    width: 150px;
+    margin-bottom: 25px;
+}
+
+.addresses-wrap h2 {
+    color: #F37254;
+    font-size: 33px;
+    font-family: '29LTZaridSlab-SemiBold';
+}
+
+.address {
+    font-size: 34px;
+    color: #000;
+}
+
+.addresses-wrap {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 30px;
+}
+
+.addresses-wrap .chk-box + label {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-radius: 50%;
+}
+
+.addresses-wrap .chk-box + label svg {
+    pointer-events: none;
+    position: absolute;
+    width: 27px;
+    right: 0;
+    top: 4px;
+    right: 5px;
+    color: #FFF;
+}
+
+#add-address .modal-body {
+    padding: 2rem;
+}
+
+#add-address .wrap-input {
+    margin-bottom: 25px;
+}
+
+#add-address img {
+    max-width: 70px;
+}
+
+#add-address .place_div .btn-hvr {
+    font-size: 22px;
+}
+
+#add-address-map .modal-body {
+    padding: 0px
+}
+
+#add-address-map .titel {
+    padding: 20px 28px;
+    margin-bottom: 0;
+    text-align: right;
+    font-size: 25px;
+}
+
+#add-address-map .place_div .btn-hvr {
+    width: 100%;
+    border-radius: 8px;
+    max-width: unset;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 100px;
+    font-size: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 350px;
+}
+
+#add-address-map .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+.addresses-data-wrap label {
+    float: left;
+    position: absolute;
+    left: 15px;
+    top: -10px;
+    bottom: 0;
+    margin: auto;
+}
+.addresses-data-wrap > img {
+    position: absolute;
+    right: 15px;
+    width: 90px;
+    border-radius: 50%;
+    height: 85px;
+    object-fit: cover;
+}
+.addresses-data-wrap {
+    position: relative;
+    padding-right: 120px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 20px;
+}
+.addresses-data-wrap .chk-box + label , .payment-method-wrap .chk-box + label {
+    float: left;
+    width: 35px;
+    height: 35px;
+    border-width: 3px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+}
+
+.addresses-data-wrap .chk-box + label svg , .payment-method-wrap .chk-box + label svg {
+    pointer-events: none;
+    position: absolute;
+    width: 23px;
+    top: 4px;
+    right: 3px;
+    color: #FFF;
+}
+
+.addresses-data h3 {
+    font-family: '29LTZaridSlab-SemiBold';
+    font-size: 23px;
+}
+.addresses-data h2 {
+    font-family: '29LTZaridSlab-SemiBold';
+    margin-bottom: 0;
+}
+
+.payment-method-wrap h2{
+     font-family: '29LTZaridSlab-SemiBold';
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+.payment-method-wrap {
+    display: inline-flex;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.payment-method-wrap img {
+    width: 45px;
+    margin-left: 20px;
+}
+
+.breadcrumbs .container {
+    position: relative;
+}
+.progress {
+    height: 22px;
+    border-radius: 10px;
+}
+.progress-bar {
+    font-size: 19px;
+    font-weight: 600;
+}
+.progress-wrap {
+    width: 260px;
+    float: left;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.progress-wrap span {
+    font-size: 24px;
+    font-weight: 600;
+}
+.progress-wrap h2 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    #add-address-map .modal-dialog {
+        max-width: 700px;
+        margin: 5.75rem auto;
+    }
+}
+
 @media (min-width: 576px) {
+    #add-address .modal-dialog {
+        margin: 8.75rem auto;
+    }
 
     #change-password .modal-dialog,
     #sign-up .modal-dialog {
         margin: 10.75rem auto;
     }
+
+
 }
 
-@media(max-width: 768px) {
+@media(max-width: 991px) {
+    .profile-data-wrap {
+        padding-right: 20px;
+    }
+
+    .input-file-wrap input {
+
+        width: calc(100% - 130px);
+    }
+
+    .profile-data-wrap .btn-hvr {
+        margin-top: 10px;
+        font-size: 20px;
+        border-radius: 7px;
+        height: 55px;
+        line-height: 55px;
+    }
+
+    .img-user {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+
+    .input-file-wrap {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .profile-data-wrap {
+
+        margin-top: 20px;
+
+    }
+
+    .input-file-wrap {
+        font-size: 20px;
+    }
+
+    .profile-data-wrap {
+        padding-right: 0px;
+    }
+
     .notafacation-wrap > img {
         right: 20px;
         width: 60px;
@@ -565,6 +942,7 @@ input#check:focus + label {
         width: 480px;
         margin: auto;
     }
+
 }
 
 @media(max-width: 500px) {
@@ -575,7 +953,7 @@ input#check:focus + label {
     .wallet-wrap {
         width: 100%;
         margin: 0px 15px;
-/*        padding-bottom: 100px;*/
+        /*        padding-bottom: 100px;*/
     }
 
     .wallet-data .the-balance {
